@@ -53,26 +53,26 @@ if (len(sys.argv)) >=3:
     laststart = response['lastStartTimestamp']
 
     # Last Stopped
-    if lastStopTimestamp in response:
+    if 'lastStopTimestamp' in response:
         laststop = response['lastStopTimestamp']
     else:
         laststop = None
 
     # Get status
-    if status in response:
+    if 'status' in response:
         status = response['status']
     else:
         status = None
    
 
     # Get status Message
-    if statusMessage in response:
+    if 'statusMessage' in response:
         smessage = response['statusMessage']
     else:
         smessage = None
 
     # Get Labels
-    if labels in response:
+    if 'labels' in response:
         labels = response['labels']
     else:
         labels = None
