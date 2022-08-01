@@ -1,3 +1,0 @@
-[submodule "gcp-devcontainer"]
-	path = gcp-devcontainer
-	url = git@github.com:cpritchett/gcp-devcontainer.git
