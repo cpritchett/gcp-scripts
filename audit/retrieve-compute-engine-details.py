@@ -53,15 +53,28 @@ if (len(sys.argv)) >=3:
     laststart = response['lastStartTimestamp']
 
     # Last Stopped
-    laststop = response['lastStopTimestamp']
+    if lastStopTimestamp in response:
+        laststop = response['lastStopTimestamp']
+    else:
+        laststop = None
 
     # Get status
-    status = response['status']
+    if status in response:
+        status = response['status']
+    else:
+        status = None
+   
 
     # Get status Message
-    smessage = response['statusMessage']
+    if statusMessage in response:
+        smessage = response['statusMessage']
+    else:
+        smessage = None
 
     # Get Labels
-    labels   =  response['labels']
+    if labels in response:
+        labels = response['labels']
+    else:
+        labels = None
 
     print(f'{project},{instance},{zone},{mtype},{os},{cpu},{memory},{dsize},{ctime},{laststart},{laststop},{status},{smessage},{labels}')
